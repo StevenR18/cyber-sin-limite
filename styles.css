@@ -82,3 +82,4 @@ body{background-color:#09070f;background-image:radial-gradient(ellipse at 50% 0%
   .service-card{padding-inline:16px}
   .card-links{gap:10px}
 }
+.detail-row .map-link{display:inline-flex;align-items:center;gap:6px;min-height:40px;margin-top:6px;color:#ff9a38;font-weight:700;text-decoration:underline;text-underline-offset:3px}
