@@ -39,3 +39,46 @@ body{background-color:#09070f;background-image:radial-gradient(ellipse at 50% 0%
 @keyframes bat-fly{0%{transform:translate(0,0) scale(.55) rotate(var(--turn,0deg));opacity:0}12%{opacity:.92}75%{opacity:.85}100%{transform:translate(var(--dx),var(--dy)) scale(.18) rotate(calc(var(--turn,0deg) + 45deg));opacity:0}}
 @media(max-width:680px){.halloween-web{top:68px;width:82px;opacity:.65}.hero:after{right:14px;bottom:15px;font-size:17px}}
 @media(prefers-reduced-motion:reduce){.bat-flight-layer{display:none!important}.welcome-bat{animation:none!important}}
+
+/* Ajustes de lectura y toque para móviles estrechos y medianos. */
+@media(max-width:680px){
+  html,body{max-width:100%;overflow-x:clip}
+  .container{width:calc(100% - 32px)}
+  .hero-grid{padding-top:48px}
+  .hero h1{font-size:clamp(32px,9.2vw,43px);line-height:1.13}
+  .hero-copy>p{font-size:15px;line-height:1.65}
+  .hero-actions{align-items:stretch}
+  .hero-actions .button{min-height:48px}
+  .hero-art{min-height:clamp(240px,70vw,300px)}
+  .hero-art img{width:min(250px,66vw);height:auto;aspect-ratio:1;object-fit:cover}
+  .art-tag{font-size:9px;padding:8px 10px}
+  .service-grid{grid-template-columns:1fr;gap:12px}
+  .service-card{min-height:0;padding:20px 18px 17px}
+  .service-card>p,.service-card ul{font-size:13px}
+  .service-card li{line-height:1.45}
+  .card-link{min-height:44px;font-size:13px}
+  .section-heading h2,.contact h2{font-size:clamp(27px,7.6vw,32px)}
+  .section-pad{padding:58px 0}
+  .contact-panel{padding:26px 20px;gap:24px}
+  .contact-details{padding-top:20px}
+  .detail-row{align-items:flex-start;min-width:0}
+  .detail-row>div{min-width:0;overflow-wrap:anywhere}
+  .footer-inner{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+  .footer-inner>p,.footer-contact,.footer-inner>small{width:auto;margin:0;order:initial;min-width:0;overflow-wrap:anywhere}
+  .footer-inner>small{font-size:11px}
+  .floating-wa{min-height:48px}
+}
+@media(max-width:360px){
+  .container{width:calc(100% - 28px)}
+  .header-inner{gap:8px}
+  .brand{gap:8px;min-width:0}
+  .brand-name{font-size:11px;white-space:nowrap}
+  .brand img{width:38px;height:38px;flex:none}
+  .menu-toggle{flex:none}
+  .hero-grid{padding-top:40px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .button{width:100%}
+  .hero-bottom{gap:7px;font-size:7px;letter-spacing:.1em}
+  .service-card{padding-inline:16px}
+  .card-links{gap:10px}
+}

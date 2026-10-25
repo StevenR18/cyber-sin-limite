@@ -50,7 +50,8 @@
       {x:48,y:-8,dx:-30,dy:82}, {x:57,y:105,dx:32,dy:-88},
       {x:2,y:38,dx:88,dy:5}, {x:98,y:44,dx:-86,dy:-10}
     ];
-    starts.forEach((flight, index) => {
+    const isSmallScreen = window.matchMedia('(max-width: 680px)').matches;
+    starts.slice(0, isSmallScreen ? 5 : starts.length).forEach((flight, index) => {
       const bat = document.createElement('span');
       bat.className = 'welcome-bat';
       bat.innerHTML = batShape;
